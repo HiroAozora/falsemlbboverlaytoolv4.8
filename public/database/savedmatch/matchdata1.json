@@ -1,0 +1,209 @@
+{
+  "game_duration": "03:13",
+  "game_number": "1",
+  "teamdata": {
+    "blueteam": {
+      "teamname": "",
+      "score": "",
+      "logo": "",
+      "totalgold": 1732,
+      "turret": 0,
+      "lord": 0,
+      "turtle": 0,
+      "playerlist": [
+        {
+          "name": "kairi",
+          "lane": "junggle",
+          "hero": "Harley",
+          "banhero": "Marcel",
+          "level": 5,
+          "gold": 1732,
+          "KDA": "1/0/0",
+          "spell": "Retribution",
+          "itemlist": [
+            "Behemoth Hunter's Tough Boots",
+            "Fury hammer",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "lutpi",
+          "lane": "exp",
+          "hero": "Lapu Lapu",
+          "banhero": "Lylia",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "Enchanted Talisman",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "kiboy",
+          "lane": "roam",
+          "hero": "Chip",
+          "banhero": "Phoveus",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "Endless Battle",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "kelra",
+          "lane": "gold",
+          "hero": "Beatrix",
+          "banhero": "",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "Blade Armor",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "S A N Z",
+          "lane": "mid",
+          "hero": "Kadita",
+          "banhero": "",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "Vampire Mallet",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        }
+      ]
+    },
+    "redteam": {
+      "teamname": "",
+      "score": "",
+      "logo": "",
+      "totalgold": 1011,
+      "turret": 0,
+      "lord": 0,
+      "turtle": 0,
+      "playerlist": [
+        {
+          "name": "superken",
+          "lane": "junggle",
+          "hero": "Lancelot",
+          "banhero": "Mathilda",
+          "level": 2,
+          "gold": 1011,
+          "KDA": "0/1/0",
+          "spell": "",
+          "itemlist": [
+            "Ice Hunter's Tough Boots",
+            "Dagger",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "supertoy",
+          "lane": "gold",
+          "hero": "Obsidia",
+          "banhero": "Angela",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "idok",
+          "lane": "roam",
+          "hero": "Tigreal",
+          "banhero": "Yve",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "yehezkiel",
+          "lane": "mid",
+          "hero": "Pharsa",
+          "banhero": "",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        },
+        {
+          "name": "superdan",
+          "lane": "exp",
+          "hero": "Cici",
+          "banhero": "",
+          "level": 0,
+          "gold": 0,
+          "KDA": "0/0/0",
+          "spell": "",
+          "itemlist": [
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle",
+            "idle"
+          ]
+        }
+      ]
+    }
+  },
+  "winmatches": "blue"
+}

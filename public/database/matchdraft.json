@@ -1,0 +1,80 @@
+{
+  "draftdata": {
+    "timer": "60",
+    "timerRunning": false,
+    "current_phase": 13,
+    "blueside": {
+      "ban": [
+        {
+          "hero": ""
+        },
+        {
+          "hero": ""
+        },
+        {
+          "hero": "/Assets/HeroPick/phoveus.png"
+        },
+        {
+          "hero": ""
+        },
+        {
+          "hero": ""
+        }
+      ],
+      "pick": [
+        {
+          "hero": "/Assets/HeroPick/harley.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/lapulapu.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/angela.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/beatrix.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/kadita.png"
+        }
+      ]
+    },
+    "redside": {
+      "ban": [
+        {
+          "hero": ""
+        },
+        {
+          "hero": ""
+        },
+        {
+          "hero": "/Assets/HeroPick/yve.png"
+        },
+        {
+          "hero": ""
+        },
+        {
+          "hero": ""
+        }
+      ],
+      "pick": [
+        {
+          "hero": "/Assets/HeroPick/lancelot.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/obsidia.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/tigreal.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/pharsa.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/cici.png"
+        }
+      ]
+    },
+    "timer_running": true
+  }
+}

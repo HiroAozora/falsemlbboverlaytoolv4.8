@@ -1,0 +1,42 @@
+{
+  "1": {
+    "show": false,
+    "time": "",
+    "logo1": "http://192.168.100.32:3000/Assets/Other/transparent.png",
+    "team1": "",
+    "score1": "",
+    "logo2": "http://192.168.100.32:3000/Assets/Other/transparent.png",
+    "team2": "",
+    "score2": ""
+  },
+  "2": {
+    "show": false,
+    "time": "",
+    "logo1": "http://192.168.100.32:3000/Assets/Other/transparent.png",
+    "team1": "",
+    "score1": "",
+    "logo2": "http://192.168.100.32:3000/Assets/Other/transparent.png",
+    "team2": "",
+    "score2": ""
+  },
+  "3": {
+    "show": false,
+    "time": "",
+    "logo1": "http://192.168.1.5:3333/Assets/Other/transparent.png",
+    "team1": "",
+    "score1": "",
+    "logo2": "http://192.168.1.5:3333/Assets/Other/transparent.png",
+    "team2": "",
+    "score2": ""
+  },
+  "4": {
+    "show": false,
+    "time": "",
+    "logo1": "http://192.168.1.5:3333/Assets/Other/transparent.png",
+    "team1": "",
+    "score1": "",
+    "logo2": "http://192.168.1.5:3333/Assets/Other/transparent.png",
+    "team2": "",
+    "score2": ""
+  }
+}

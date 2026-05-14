@@ -1,0 +1,21 @@
+{
+  "_comment": "Mapping battle_skill_id dari API Moonton ke nama spell lokal (Assets/itemandspell/{name}.png)",
+  "_note": "ID ini dikumpulkan dari match data nyata — tambahkan ID baru saat ditemukan dari response API",
+  "_howto": "Untuk menemukan ID baru: buka DevTools saat fetch, lihat player_list[].battle_skill_id di response",
+  "spells": [
+    { "id": 1,  "name": "Flicker",     "icon": "Flicker.png" },
+    { "id": 2,  "name": "Inspire",     "icon": "Inspire.png" },
+    { "id": 3,  "name": "Execute",     "icon": "Execute.png" },
+    { "id": 4,  "name": "Sprint",      "icon": "Sprint.png" },
+    { "id": 5,  "name": "Vengeance",   "icon": "Vengeance.png" },
+    { "id": 6,  "name": "Revitalize",  "icon": "Revitalize.png" },
+    { "id": 7,  "name": "Petrify",     "icon": "Petrify.png" },
+    { "id": 8,  "name": "Aegis",       "icon": "Aegis.png" },
+    { "id": 9,  "name": "Purify",      "icon": "Purify.png" },
+    { "id": 10, "name": "Arrival",     "icon": "Arrival.png" },
+    { "id": 11, "name": "Retribution", "icon": "Retribution.png" },
+    { "id": 12, "name": "Flameshot",   "icon": "Flameshot.png" },
+    { "id": 13, "name": "Conceal",     "icon": "Conceal.png" },
+    { "id": 14, "name": "Encourage",   "icon": "Encourage.png" }
+  ]
+}

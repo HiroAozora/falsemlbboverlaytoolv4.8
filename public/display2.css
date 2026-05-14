@@ -1,0 +1,724 @@
+@font-face {
+  font-family: "myfonts";
+  src: url("Assets/Font/Renegade\ Pursuit.otf") format("truetype");
+}
+
+/* Menggunakan font di seluruh halaman */
+body {
+  font-family: "myfonts", sans-serif;
+}
+
+:root {
+  --primarycolor: #fff;
+  --boredercolor: #ffffff;
+  --textcolor1: #ffffff;
+  --textcolor2: #252525;
+}
+
+.mainbox {
+  width: 1920px;
+  height: 367px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  width: 1920px;
+  height: 92.5px;
+  background-image: url(Assets/Other/draftbgtop.png);
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px var(--boredercolor);
+  box-sizing: border-box;
+}
+
+.lower {
+  width: 1920px;
+  height: 274.5px;
+  background-image: url(Assets/Other/draftbg.png);
+  background-size: 100%;
+
+  display: flex;
+}
+
+.upperside {
+  width: 725px;
+  height: 92.5px;
+  border: solid 1px var(--boredercolor);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#upper-blue {
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 40px; /* Mendekatkan ban slot ke tengah */
+}
+
+#upper-red {
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 40px; /* Mendekatkan ban slot ke tengah */
+}
+
+.uppermid {
+  width: 470px;
+  height: 92.5px;
+  border-left: solid 1px var(--boredercolor);
+  border-right: solid 1px var(--boredercolor);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(Assets/Other/tourlogo.png);
+  background-size: 100%;
+  position: relative;
+}
+
+/* Map Info Box: fill seluruh uppermid */
+.map-info-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+.map-icon-placeholder {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.map-icon-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.map-icon-text {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: "myfonts", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.map-name-text {
+  font-family: "myfonts", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.bantextbox {
+  width: 50px;
+  height: 92.5px;
+}
+
+.banholder {
+  width: 400px;
+  height: 92.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamnameholder1 {
+  width: 400px;
+  height: 92.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: var(--textcolor1);
+  text-align: left;
+}
+
+.teamnameholder2 {
+  width: 400px;
+  height: 92.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: var(--textcolor1);
+  text-align: right;
+}
+
+.banhero {
+  width: 74px;
+  height: 74px;
+  position: relative;
+  margin: 3px;
+  overflow: hidden;
+  border: solid 1px var(--boredercolor);
+  background-image: url(Assets/Other/bab2.png);
+  background-size: 100%;
+}
+
+.banhero img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  scale: 3;
+  margin-top: 50px;
+  filter: grayscale();
+}
+
+.lowerside {
+  width: 725px;
+  height: 274.5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.pickholder {
+  width: 725px;
+  height: 227px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.nickholder {
+  width: 725px;
+  height: 47.5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+.lowermid {
+  width: 470px;
+  height: 274.5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px var(--boredercolor);
+  box-sizing: border-box;
+}
+
+.heropick {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  position: relative;
+  border: solid 1px var(--boredercolor);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* State: Sedang aktif picking -> melebar */
+.heropick.picking-active {
+  flex: 1.2;
+}
+
+/* State: Sudah di-pick -> sedikit sempit */
+.heropick.picking-done {
+  flex: 0.88;
+}
+
+/* Gambar hero di dalam heropick: spesifik .image-box img agar TIDAK menimpa lane icon */
+.heropick .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  scale: 1;
+}
+
+/* Slot ujung kiri (blue-1): anchor gambar ke kiri agar tidak bolong di kiri */
+#heropick-blue-1 .image-box img {
+  object-position: left top;
+}
+/* Slot ujung kanan (red-1 di red side): anchor ke kanan */
+#heropick-red-1 .image-box img {
+  object-position: right top;
+}
+
+.playername {
+  flex: 1;
+  min-width: 0;
+  height: 47.5px;
+  background-color: var(--textcolor2);
+  border: solid 1px var(--boredercolor);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  color: var(--boredercolor);
+  overflow: hidden;
+  transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sync state dengan heropick — nilai HARUS sama */
+.playername.picking-active {
+  flex: 1.2; /* SAMA dengan .heropick.picking-active */
+  /* Garis aksen merah tipis di atas nama box saat slot aktif */
+  box-shadow: inset 0 3px 0 0 rgba(220, 38, 38, 0.85);
+}
+.playername.picking-done {
+  flex: 0.88;
+}
+
+.upperlowermid {
+  width: 470px;
+  height: 179px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-info-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.center-team-name {
+  font-family: "myfonts", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  
+  /* Solusi untuk nama sekolah/tim panjang */
+  white-space: normal;
+  max-width: 135px;
+  text-align: center;
+  line-height: 1.1;
+  
+  /* Membatasi maksimal 3 baris agar tidak bocor ke bawah */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.teamlogo {
+  width: 102px;
+  height: 102px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(Assets/Other/teamframe.png);
+  background-size: 100%;
+}
+
+.teamlogo img {
+  width: 102px;
+  height: 102px;
+  object-fit: contain;
+  scale: 0.8;
+}
+
+.score {
+  width: 45px;
+  height: 45px;
+
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--boredercolor);
+  font-size: 50px;
+}
+
+.vs {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  color: var(--boredercolor);
+}
+
+.lowerlowermid {
+  width: 470px;
+  height: 95.5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerbar {
+  width: 420px;
+  height: 10px;
+  background-color: var(--textcolor2);
+}
+
+#timer-bar {
+  width: 420px;
+  height: 10px;
+  background-color: var(--boredercolor);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) scaleX(1);
+  transition: none;
+  transition: 0.3s;
+}
+
+.arrow {
+  width: 470px;
+  height: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow img {
+  scale: 0.23;
+}
+
+.countdown {
+  width: 70px;
+  height: 30px;
+  background-color: var(--boredercolor);
+  margin-top: -114px;
+  font-size: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--textcolor2);
+}
+/*phasing*/
+
+.draft-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.box {
+  width: 1000px;
+  height: 4000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-left: -200px;
+  margin-top: -100px;
+}
+
+.ban0 {
+  display: flex;
+}
+.pick {
+  display: flex;
+  position: absolute;
+}
+.active-ban {
+  background-color: rgb(156, 11, 11);
+  color: white;
+  animation: breathe 1.5s infinite alternate;
+}
+.active-pick {
+  background-color: rgb(255, 255, 255);
+  color: white;
+  animation: breathe 1.5s infinite alternate;
+}
+@keyframes breathe {
+  0% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+.audiob {
+  margin-top: 100px;
+}
+
+/*Hero*/
+.image-container {
+  display: flex;
+}
+
+.image-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.image-box img {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(150%);
+  transition:
+    transform 2s ease-in-out,
+    opacity 2s;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+}
+.image-box.show img {
+  transform: translateX(0%);
+  opacity: 1;
+  position: absolute;
+}
+
+.clone-image-box img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  transition-delay: 2s;
+}
+/* Animasi untuk clone */
+.clone-animate {
+  transition-delay: 1s;
+  animation: fadeInScale 1s ease-out forwards;
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hide {
+  width: 0px;
+  height: 0px;
+  display: none;
+  opacity: 0;
+  font-size: 0px;
+  overflow: hidden;
+}
+
+.name-image-box {
+  position: absolute;
+  z-index: 1;
+  scale: 1.3;
+  margin-top: 100px;
+}
+
+/* ============================================
+   LANE ICON (ROLE INDICATOR)
+   - Default / picking-active tanpa hero : TENGAH card, lebih besar
+   - .has-hero (hero sudah dikonfirm)     : LANGSUNG geser ke pojok
+     Icon ikut bergerak saat card expand/collapse karena
+     red side memakai left: calc(100% - Npx)
+   ============================================ */
+.lanelogo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  pointer-events: none;
+
+  /* === DEFAULT IDLE: lebih besar, di tengah === */
+  width: 40px;
+  height: 40px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Smooth transition saat pindah ke pojok — disinkronkan dengan animasi reveal hero (2s) */
+  transition:
+    top 1.5s ease-in-out,
+    left 1.5s ease-in-out,
+    transform 1.5s ease-in-out,
+    width 1.5s ease-in-out,
+    height 1.5s ease-in-out,
+    background 0.5s ease,
+    border-radius 0.5s ease,
+    padding 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Red lane juga mulai dari tengah */
+.redlane {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* === SAAT HERO DIKONFIRM (.has-hero): LANGSUNG geser ke pojok === */
+/* Trigger TIDAK menunggu card collapse (beda dengan .picking-done) */
+
+/* Blue: pojok kiri atas */
+.heropick.has-hero .lanelogo.bluelane {
+  top: 7px;
+  left: 7px;
+  transform: none;
+  width: 30px;
+  height: 30px;
+  /* Badge backdrop supaya ikon tetap terbaca di atas gambar hero */
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Red: pojok kanan atas */
+/* Pakai left: calc(100% - Npx) bukan right agar bisa smooth transition */
+/* 30px icon + 2*3px padding + 7px margin dari kanan = 43px */
+/* Karena card melebar/menyempit, calc(100%) ikut bergerak otomatis! */
+.heropick.has-hero .lanelogo.redlane {
+  top: 7px;
+  left: calc(100% - 43px);
+  transform: none;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Tetap di pojok juga saat picking-done (sudah di sana, tapi pastikan class tidak bertabrakan) */
+.heropick.picking-done.has-hero .lanelogo.bluelane {
+  top: 7px;
+  left: 7px;
+  transform: none;
+}
+.heropick.picking-done.has-hero .lanelogo.redlane {
+  top: 7px;
+  left: calc(100% - 43px);
+  transform: none;
+}
+
+/* ============================================
+   LANE ICON IMAGE
+   filter: invert() = PNG gelap jadi PUTIH
+   Untuk warna lain:
+     merah  -> filter: invert() sepia(1) saturate(5) hue-rotate(320deg)
+     kuning -> filter: invert() sepia(1) saturate(5) hue-rotate(20deg)
+     biru   -> filter: invert() sepia(1) saturate(5) hue-rotate(200deg)
+   ============================================ */
+.lanelogo img {
+  /* filter: invert() = bikin gelap jadi putih */
+  filter: invert();
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  scale: 1 !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ============================================
+   COACH BAR
+   ============================================ */
+.coachbar {
+  width: auto;
+  min-width: 150px;
+  max-width: 300px;
+  display: none; /* controlled by JS setCoach */
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Override via JS */
+.coachbar[style*="display: flex"],
+.coachbar[style*="display:flex"] {
+  height: auto;
+  opacity: 1;
+}
+
+.coachbar-blue {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.coachbar-red {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.coach-icon-placeholder {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.coach-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coach-icon-fallback {
+  display: none !important;
+}
+
+.coach-label {
+  display: none;
+}
+
+.coach-name {
+  font-family: "myfonts", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: visible;
+}

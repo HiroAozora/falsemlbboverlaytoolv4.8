@@ -1,0 +1,794 @@
+[
+  {
+    "id": 1,
+    "name": "Miya",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 2,
+    "name": "Balmond",
+    "role": "Fighter",
+    "lane": "Jungle/EXP Lane"
+  },
+  {
+    "id": 3,
+    "name": "Saber",
+    "role": "Assassin",
+    "lane": "Jungle/Roaming"
+  },
+  {
+    "id": 4,
+    "name": "Alice",
+    "role": "Tank/Mage",
+    "lane": "EXP Lane/Jungle"
+  },
+  {
+    "id": 5,
+    "name": "Nana",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 6,
+    "name": "Tigreal",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 7,
+    "name": "Alucard",
+    "role": "Fighter/Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 8,
+    "name": "Karina",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 9,
+    "name": "Akai",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 10,
+    "name": "Franco",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 11,
+    "name": "Bane",
+    "role": "Fighter/Mage",
+    "lane": "Jungle/EXP Lane"
+  },
+  {
+    "id": 12,
+    "name": "Bruno",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 13,
+    "name": "Clint",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 14,
+    "name": "Rafaela",
+    "role": "Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 15,
+    "name": "Eudora",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 16,
+    "name": "Zilong",
+    "role": "Fighter/Assassin",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 17,
+    "name": "Fanny",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 18,
+    "name": "Layla",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 19,
+    "name": "Minotaur",
+    "role": "Tank/Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 20,
+    "name": "Lolita",
+    "role": "Support/Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 21,
+    "name": "Hayabusa",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 22,
+    "name": "Freya",
+    "role": "Fighter",
+    "lane": "EXP Lane/Jungle"
+  },
+  {
+    "id": 23,
+    "name": "Gord",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 24,
+    "name": "Natalia",
+    "role": "Assassin",
+    "lane": "Jungle/Roaming"
+  },
+  {
+    "id": 25,
+    "name": "Kagura",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 26,
+    "name": "Chou",
+    "role": "Fighter",
+    "lane": "EXP Lane/Roaming"
+  },
+  {
+    "id": 27,
+    "name": "Sun",
+    "role": "Fighter",
+    "lane": "EXP Lane/Jungle"
+  },
+  {
+    "id": 28,
+    "name": "Alpha",
+    "role": "Fighter",
+    "lane": "Jungle/EXP Lane"
+  },
+  {
+    "id": 29,
+    "name": "Ruby",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 30,
+    "name": "Yisunshin",
+    "role": "Assassin/Marksman",
+    "lane": "Jungle"
+  },
+  {
+    "id": 31,
+    "name": "Moskov",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 32,
+    "name": "Johnson",
+    "role": "Tank/Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 33,
+    "name": "Cyclops",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 34,
+    "name": "Estes",
+    "role": "Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 35,
+    "name": "Hilda",
+    "role": "Fighter/Tank",
+    "lane": "Roaming/EXP Lane"
+  },
+  {
+    "id": 36,
+    "name": "Aurora",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 37,
+    "name": "Lapu Lapu",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 38,
+    "name": "Vexana",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 39,
+    "name": "Roger",
+    "role": "Fighter/Marksman",
+    "lane": "Jungle"
+  },
+  {
+    "id": 40,
+    "name": "Karrie",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 41,
+    "name": "Gatotkaca",
+    "role": "Tank/Fighter",
+    "lane": "Roaming/EXP Lane"
+  },
+  {
+    "id": 42,
+    "name": "Harley",
+    "role": "Assassin/Mage",
+    "lane": "Jungle/Mid Lane"
+  },
+  {
+    "id": 43,
+    "name": "Irithel",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 44,
+    "name": "Grock",
+    "role": "Tank/Fighter",
+    "lane": "Roaming"
+  },
+  {
+    "id": 45,
+    "name": "Argus",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 46,
+    "name": "Odette",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 47,
+    "name": "Lancelot",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 48,
+    "name": "Diggie",
+    "role": "Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 49,
+    "name": "Hylos",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 50,
+    "name": "Zhask",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 51,
+    "name": "Helcurt",
+    "role": "Assassin",
+    "lane": "Jungle/Roaming"
+  },
+  {
+    "id": 52,
+    "name": "Pharsa",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 53,
+    "name": "Lesley",
+    "role": "Marksman/Assassin",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 54,
+    "name": "Jawhead",
+    "role": "Fighter",
+    "lane": "Roaming/EXP Lane"
+  },
+  {
+    "id": 55,
+    "name": "Angela",
+    "role": "Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 56,
+    "name": "Gusion",
+    "role": "Assassin",
+    "lane": "Jungle/Mid Lane"
+  },
+  {
+    "id": 57,
+    "name": "Valir",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 58,
+    "name": "Martis",
+    "role": "Fighter",
+    "lane": "Jungle/EXP Lane"
+  },
+  {
+    "id": 59,
+    "name": "Uranus",
+    "role": "Tank",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 60,
+    "name": "Hanabi",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 61,
+    "name": "Chang'e",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 62,
+    "name": "Kaja",
+    "role": "Support/Fighter",
+    "lane": "Roaming"
+  },
+  {
+    "id": 63,
+    "name": "Selena",
+    "role": "Assassin/Mage",
+    "lane": "Mid Lane/Roaming"
+  },
+  {
+    "id": 64,
+    "name": "Aldous",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 65,
+    "name": "Claude",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 66,
+    "name": "Vale",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 67,
+    "name": "Leomord",
+    "role": "Fighter",
+    "lane": "Jungle"
+  },
+  {
+    "id": 68,
+    "name": "Lunox",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 69,
+    "name": "Hanzo",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 70,
+    "name": "Beleric",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 71,
+    "name": "Kimmy",
+    "role": "Marksman/Mage",
+    "lane": "Mid Lane/Gold Lane"
+  },
+  {
+    "id": 72,
+    "name": "Thamuz",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 73,
+    "name": "Harith",
+    "role": "Mage",
+    "lane": "Gold Lane/Jungle"
+  },
+  {
+    "id": 74,
+    "name": "Minsitthar",
+    "role": "Fighter",
+    "lane": "EXP Lane/Roaming"
+  },
+  {
+    "id": 75,
+    "name": "Kadita",
+    "role": "Mage/Assassin",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 76,
+    "name": "Faramis",
+    "role": "Support/Mage",
+    "lane": "Mid Lane/Roaming"
+  },
+  {
+    "id": 77,
+    "name": "Badang",
+    "role": "Fighter",
+    "lane": "Roaming/EXP Lane"
+  },
+  {
+    "id": 78,
+    "name": "Khufra",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 79,
+    "name": "Granger",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 80,
+    "name": "Guinevere",
+    "role": "Fighter",
+    "lane": "EXP Lane/Jungle"
+  },
+  {
+    "id": 81,
+    "name": "Esmeralda",
+    "role": "Tank/Mage",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 82,
+    "name": "Terizla",
+    "role": "Fighter/Tank",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 83,
+    "name": "Xborg",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 84,
+    "name": "Ling",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 85,
+    "name": "Dyroth",
+    "role": "Fighter",
+    "lane": "EXP Lane/Jungle"
+  },
+  {
+    "id": 86,
+    "name": "Lylia",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 87,
+    "name": "Baxia",
+    "role": "Tank",
+    "lane": "Jungle/Roaming"
+  },
+  {
+    "id": 88,
+    "name": "Masha",
+    "role": "Fighter/Tank",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 89,
+    "name": "Wanwan",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 90,
+    "name": "Silvanna",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 91,
+    "name": "Cecilion",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 92,
+    "name": "Carmila",
+    "role": "Support/Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 93,
+    "name": "Atlas",
+    "role": "Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 94,
+    "name": "Popol and Kupa",
+    "role": "Marksman",
+    "lane": "Jungle/Gold Lane"
+  },
+  {
+    "id": 95,
+    "name": "Yuzhong",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 96,
+    "name": "Luo Yi",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 97,
+    "name": "Benedetta",
+    "role": "Assassin/Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 98,
+    "name": "Khaleed",
+    "role": "Fighter",
+    "lane": "Roaming/EXP Lane"
+  },
+  {
+    "id": 99,
+    "name": "Barats",
+    "role": "Tank/Fighter",
+    "lane": "Jungle"
+  },
+  {
+    "id": 100,
+    "name": "Brody",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 101,
+    "name": "Yve",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 102,
+    "name": "Mathilda",
+    "role": "Support/Assassin",
+    "lane": "Roaming"
+  },
+  {
+    "id": 103,
+    "name": "Paquito",
+    "role": "Fighter/Assassin",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 104,
+    "name": "Gloo",
+    "role": "Tank",
+    "lane": "Roaming/EXP Lane"
+  },
+  {
+    "id": 105,
+    "name": "Beatrix",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 106,
+    "name": "Phoveus",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 107,
+    "name": "Natan",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 108,
+    "name": "Aulus",
+    "role": "Fighter",
+    "lane": "Jungle"
+  },
+  {
+    "id": 109,
+    "name": "Aamon",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 110,
+    "name": "Valentina",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 111,
+    "name": "Edith",
+    "role": "Tank/Marksman",
+    "lane": "EXP Lane/Roaming"
+  },
+  {
+    "id": 112,
+    "name": "Floryn",
+    "role": "Support",
+    "lane": "Roaming"
+  },
+  {
+    "id": 113,
+    "name": "Yin",
+    "role": "Fighter/Assassin",
+    "lane": "Jungle/EXP Lane"
+  },
+  {
+    "id": 114,
+    "name": "Melissa",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 115,
+    "name": "Xavier",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 116,
+    "name": "Julian",
+    "role": "Assassin/Fighter",
+    "lane": "Jungle/EXP Lane"
+  },
+  {
+    "id": 117,
+    "name": "Fredrin",
+    "role": "Fighter/Tank",
+    "lane": "Jungle"
+  },
+  {
+    "id": 118,
+    "name": "Joy",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 119,
+    "name": "Novaria",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 120,
+    "name": "Arlot",
+    "role": "Fighter/Assassin",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 121,
+    "name": "Ixia",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 122,
+    "name": "Nolan",
+    "role": "Assassin",
+    "lane": "Jungle"
+  },
+  {
+    "id": 123,
+    "name": "Cici",
+    "role": "Fighter",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 124,
+    "name": "Chip",
+    "role": "Support/Tank",
+    "lane": "Roaming"
+  },
+  {
+    "id": 125,
+    "name": "Zhuxin",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 126,
+    "name": "Suyou",
+    "role": "Assassin/Fighter",
+    "lane": "Jungle"
+  },
+  {
+    "id": 127,
+    "name": "Lukas",
+    "role": "Fighter",
+    "lane": "EXP Lane/Jungle"
+  },
+  {
+    "id": 128,
+    "name": "Kalea",
+    "role": "Support/Fighter",
+    "lane": "Roaming"
+  },
+  {
+    "id": 129,
+    "name": "Zetian",
+    "role": "Mage",
+    "lane": "Mid Lane"
+  },
+  {
+    "id": 130,
+    "name": "Obsidia",
+    "role": "Marksman",
+    "lane": "Gold Lane"
+  },
+  {
+    "id": 131,
+    "name": "Sora",
+    "role": "Fighter/Assassin",
+    "lane": "EXP Lane"
+  },
+  {
+    "id": 132,
+    "name": "Marcel",
+    "role": "Support",
+    "lane": "Roaming"
+  }
+]

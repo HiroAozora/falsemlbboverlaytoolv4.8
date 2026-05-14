@@ -1,0 +1,21 @@
+{
+  "mvp": {
+    "checkboxId": "mvp-blueteam-0",
+    "side": "blue",
+    "nickname": "kairi",
+    "heroImg": "Assets/HeroPick/Harley.png",
+    "playerPhoto": "Assets/player/playertemp.png",
+    "stats": {
+      "LVL": 0,
+      "KDA": "12/0/3",
+      "GOLD": "5600",
+      "SPELL": "Inspire",
+      "ITEM 1": "Azure Blade",
+      "ITEM 2": "Brute Force Breastplate",
+      "ITEM 3": "Dreadnaught Armor",
+      "ITEM 4": "War Axe",
+      "ITEM 5": "Antique Cuirass",
+      "ITEM 6": "idle"
+    }
+  }
+}

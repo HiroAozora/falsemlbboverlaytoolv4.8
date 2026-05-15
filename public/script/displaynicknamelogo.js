@@ -52,6 +52,42 @@ function updateUI(data) {
             setMugshot(`name-image-box-${htmlId}`, player.name);
         });
     }
+
+    // --- LOGIC FALLBACK NO-LOGO & SHADOW ---
+    const config = data.teamdata.config || {};
+    const useShadow = !!config.useLogoShadow;
+
+    // Biru
+    const hasBlueLogo = (blue.logo && blue.logo.trim() !== "");
+    const blueTeamCol = document.getElementById('displayImage1') ? document.getElementById('displayImage1').closest('.team-info-col') : null;
+    if (blueTeamCol) {
+        if (hasBlueLogo) {
+            blueTeamCol.classList.remove('no-logo');
+        } else {
+            blueTeamCol.classList.add('no-logo');
+        }
+    }
+    const img1 = document.getElementById('displayImage1');
+    if (img1) {
+        if (useShadow && hasBlueLogo) img1.classList.add('logo-shadow');
+        else img1.classList.remove('logo-shadow');
+    }
+
+    // Merah
+    const hasRedLogo = (red.logo && red.logo.trim() !== "");
+    const redTeamCol = document.getElementById('displayImage2') ? document.getElementById('displayImage2').closest('.team-info-col') : null;
+    if (redTeamCol) {
+        if (hasRedLogo) {
+            redTeamCol.classList.remove('no-logo');
+        } else {
+            redTeamCol.classList.add('no-logo');
+        }
+    }
+    const img2 = document.getElementById('displayImage2');
+    if (img2) {
+        if (useShadow && hasRedLogo) img2.classList.add('logo-shadow');
+        else img2.classList.remove('logo-shadow');
+    }
 }
 
 // --- FUNGSI BANTUAN (HELPER) ---

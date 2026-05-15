@@ -26,31 +26,30 @@ body {
 .upper {
   width: 1920px;
   height: 92.5px;
-  background-image: url(Assets/Other/draftbgtop.png);
+  background-image: url(Assets/Other/costum/uppershadow.png);
   background-size: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 1px var(--boredercolor);
   box-sizing: border-box;
 }
 
 .lower {
   width: 1920px;
   height: 274.5px;
-  background-image: url(Assets/Other/draftbg.png);
-  background-size: 100%;
+  background-color: #ffffff;
 
   display: flex;
+  position: relative;
 }
 
 .upperside {
   width: 725px;
   height: 92.5px;
-  border: solid 1px var(--boredercolor);
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  padding-top: 32px; /* Diperbesar agar makin ke bawah */
 }
 
 #upper-blue {
@@ -68,15 +67,14 @@ body {
 .uppermid {
   width: 470px;
   height: 92.5px;
-  border-left: solid 1px var(--boredercolor);
-  border-right: solid 1px var(--boredercolor);
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(Assets/Other/tourlogo.png);
+  background-image: url(Assets/Other/costum/tourlogosatuesport.png);
   background-size: 100%;
   position: relative;
+  padding-top: 32px; /* Diperbesar agar makin ke bawah */
 }
 
 /* Map Info Box: fill seluruh uppermid */
@@ -88,7 +86,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0);
   white-space: nowrap;
   box-sizing: border-box;
   padding: 0 16px;
@@ -115,7 +113,7 @@ body {
 
 .map-icon-text {
   font-size: 8px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgb(0, 0, 0);
   font-family: "myfonts", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -124,7 +122,7 @@ body {
 .map-name-text {
   font-family: "myfonts", sans-serif;
   font-size: 18px;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
@@ -167,22 +165,21 @@ body {
 }
 
 .banhero {
-  width: 74px;
-  height: 74px;
+  width: 58px;
+  height: 58px;
   position: relative;
   margin: 3px;
   overflow: hidden;
-  border: solid 1px var(--boredercolor);
-  background-image: url(Assets/Other/bab2.png);
+  background-image: url(Assets/Other/costum/ban2.png);
   background-size: 100%;
 }
 
 .banhero img {
-  width: 74px;
-  height: 74px;
-  object-fit: contain;
-  scale: 3;
-  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  scale: 1.5;
   filter: grayscale();
 }
 
@@ -221,8 +218,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 1px var(--boredercolor);
   box-sizing: border-box;
+  background-image: url(Assets/Other/costum/mid.png);
+  background-size: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .heropick {
@@ -230,7 +230,6 @@ body {
   min-width: 0;
   height: 100%;
   position: relative;
-  border: solid 1px var(--boredercolor);
   box-sizing: border-box;
   overflow: hidden;
   transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1);
@@ -241,9 +240,89 @@ body {
   flex: 1.2;
 }
 
+/* Animasi kedip (pulse) background OREN tipis ala Satu Esports */
+.heropick.picking-active:not(.has-hero)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 140, 0, 0.25); /* Warna orange esports tipis */
+  z-index: 1;
+  pointer-events: none;
+  animation: pickingPulseBg 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pickingPulseBg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animasi membesar-mengecil pada lane logo saat picking */
+.heropick.picking-active:not(.has-hero) .lanelogo {
+  animation: pickingPulseLogo 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pickingPulseLogo {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
 /* State: Sudah di-pick -> sedikit sempit */
 .heropick.picking-done {
   flex: 0.88;
+}
+
+/* ============================================
+   DROP SHADOW SEBAGAI PEMISAH CARD
+   ============================================ */
+#pickholder-blue .heropick {
+  /* Bayangan ke kanan */
+  box-shadow: 12px 0 15px -5px rgba(0, 0, 0, 0.4);
+}
+#heropick-blue-5 {
+  box-shadow: none !important;
+}
+
+#pickholder-red .heropick {
+  /* Bayangan ke kiri */
+  box-shadow: -12px 0 15px -5px rgba(0, 0, 0, 0.4);
+}
+#heropick-red-5 {
+  box-shadow: none !important;
+}
+
+/* Mengatur tumpukan (z-index) agar bayangan menimpa card di sebelahnya dengan benar */
+#heropick-blue-1,
+#heropick-red-1 {
+  z-index: 5;
+}
+#heropick-blue-2,
+#heropick-red-2 {
+  z-index: 4;
+}
+#heropick-blue-3,
+#heropick-red-3 {
+  z-index: 3;
+}
+#heropick-blue-4,
+#heropick-red-4 {
+  z-index: 2;
+}
+#heropick-blue-5,
+#heropick-red-5 {
+  z-index: 1;
 }
 
 /* Gambar hero di dalam heropick: spesifik .image-box img agar TIDAK menimpa lane icon */
@@ -272,7 +351,6 @@ body {
   min-width: 0;
   height: 47.5px;
   background-color: var(--textcolor2);
-  border: solid 1px var(--boredercolor);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -287,8 +365,8 @@ body {
 /* Sync state dengan heropick — nilai HARUS sama */
 .playername.picking-active {
   flex: 1.2; /* SAMA dengan .heropick.picking-active */
-  /* Garis aksen merah tipis di atas nama box saat slot aktif */
-  box-shadow: inset 0 3px 0 0 rgba(220, 38, 38, 0.85);
+  /* Garis aksen oren tipis di atas nama box saat slot aktif */
+  box-shadow: inset 0 3px 0 0 rgba(255, 140, 0, 0.85);
 }
 .playername.picking-done {
   flex: 0.88;
@@ -313,17 +391,17 @@ body {
 .center-team-name {
   font-family: "myfonts", sans-serif;
   font-size: 16px;
-  color: #fff;
+  color: #000000;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 0 5px rgba(0,0,0,0.8);
-  
+  text-shadow: none;
+
   /* Solusi untuk nama sekolah/tim panjang */
   white-space: normal;
   max-width: 135px;
   text-align: center;
   line-height: 1.1;
-  
+
   /* Membatasi maksimal 3 baris agar tidak bocor ke bawah */
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -339,8 +417,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: url(Assets/Other/teamframe.png);
-  background-size: 100%;
+  /* background-image dihapus agar bersih tanpa frame */
+  background: transparent;
 }
 
 .teamlogo img {
@@ -348,6 +426,25 @@ body {
   height: 102px;
   object-fit: contain;
   scale: 0.8;
+  transition: filter 0.3s ease;
+}
+
+/* Jika fitur bayangan dinyalakan dari Control Panel */
+.teamlogo img.logo-shadow {
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.774));
+}
+
+/* Jika tidak ada logo (hanya nama tim yang jadi fallback utama) */
+.team-info-col.no-logo .teamlogo {
+  display: none !important;
+}
+
+.team-info-col.no-logo .center-team-name {
+  font-size: 28px; /* Teks dibesarkan seperti logo */
+  font-weight: bold;
+  max-width: 160px;
+  -webkit-line-clamp: 3;
+  line-height: 1.2;
 }
 
 .score {
@@ -358,7 +455,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--boredercolor);
+  color: #000000;
   font-size: 50px;
 }
 
@@ -370,7 +467,7 @@ body {
   justify-content: center;
 
   font-size: 20px;
-  color: var(--boredercolor);
+  color: #000000;
 }
 
 .lowerlowermid {
@@ -383,20 +480,49 @@ body {
 }
 
 .timerbar {
-  width: 420px;
-  height: 10px;
-  background-color: var(--textcolor2);
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: transparent;
+  z-index: 11;
 }
 
-#timer-bar {
-  width: 420px;
-  height: 10px;
-  background-color: var(--boredercolor);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%) scaleX(1);
-  transition: none;
-  transition: 0.3s;
+.timerbar-left {
+  left: 0;
+  width: 725px; /* Sama persis dengan lebar lowerside kiri */
+}
+
+.timerbar-right {
+  right: 0;
+  width: 725px; /* Sama persis dengan lebar lowerside kanan */
+}
+
+.timerbar-full {
+  left: 0;
+  width: 1920px;
+}
+
+#timer-bar-left,
+#timer-bar-right,
+#timer-bar-full {
+  height: 100%;
+  background-color: #ff0000;
+  transition: width 1s linear;
+}
+
+#timer-bar-left {
+  width: 100%;
+  float: right; /* Menyusut ke arah kanan (menuju tengah) */
+}
+
+#timer-bar-right {
+  width: 100%;
+  float: left; /* Menyusut ke arah kiri (menuju tengah) */
+}
+
+#timer-bar-full {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .arrow {
@@ -410,6 +536,7 @@ body {
 
 .arrow img {
   scale: 0.23;
+  filter: invert(1);
 }
 
 .countdown {
@@ -560,8 +687,8 @@ body {
   pointer-events: none;
 
   /* === DEFAULT IDLE: lebih besar, di tengah === */
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 
   top: 50%;
   left: 50%;
@@ -640,8 +767,8 @@ body {
      biru   -> filter: invert() sepia(1) saturate(5) hue-rotate(200deg)
    ============================================ */
 .lanelogo img {
-  /* filter: invert() = bikin gelap jadi putih */
-  filter: invert();
+  /* Default non-invert (hitam) agar terlihat di atas bg putih polos */
+  filter: invert(0);
   width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
@@ -652,7 +779,13 @@ body {
   scale: 1 !important;
   opacity: 1 !important;
   transform: none !important;
-  transition: none !important;
+  /* Animasi berubah dari non-invert ke invert disinkronkan dgn durasi 1.5s */
+  transition: filter 1.5s ease-in-out !important;
+}
+
+/* Saat digeser (memiliki hero), invert ke putih agar terbaca di atas portrait hero */
+.heropick.has-hero .lanelogo img {
+  filter: invert(1);
 }
 
 /* ============================================
@@ -716,7 +849,7 @@ body {
 .coach-name {
   font-family: "myfonts", sans-serif;
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   letter-spacing: 2px;
   text-transform: uppercase;
   white-space: nowrap;

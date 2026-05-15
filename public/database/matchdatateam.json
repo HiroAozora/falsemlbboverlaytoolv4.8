@@ -14,8 +14,8 @@
         {
           "name": "kairi",
           "lane": "junggle",
-          "hero": "Harley",
-          "banhero": "",
+          "hero": "Baxia",
+          "banhero": "Layla",
           "level": 5,
           "gold": 1732,
           "KDA": "1/0/0",
@@ -32,8 +32,8 @@
         {
           "name": "lutpi",
           "lane": "exp",
-          "hero": "Lapu Lapu",
-          "banhero": "",
+          "hero": "",
+          "banhero": "Obsidia",
           "level": 0,
           "gold": 0,
           "KDA": "0/0/0",
@@ -50,8 +50,8 @@
         {
           "name": "kiboy",
           "lane": "roam",
-          "hero": "Angela",
-          "banhero": "Phoveus",
+          "hero": "",
+          "banhero": "",
           "level": 0,
           "gold": 0,
           "KDA": "0/0/0",
@@ -68,7 +68,7 @@
         {
           "name": "kelra",
           "lane": "gold",
-          "hero": "Beatrix",
+          "hero": "",
           "banhero": "",
           "level": 0,
           "gold": 0,
@@ -86,7 +86,7 @@
         {
           "name": "S A N Z",
           "lane": "mid",
-          "hero": "Kadita",
+          "hero": "",
           "banhero": "",
           "level": 0,
           "gold": 0,
@@ -117,7 +117,7 @@
           "name": "superken",
           "lane": "junggle",
           "hero": "Lancelot",
-          "banhero": "",
+          "banhero": "Miya",
           "level": 2,
           "gold": 1011,
           "KDA": "0/1/0",
@@ -134,8 +134,8 @@
         {
           "name": "supertoy",
           "lane": "gold",
-          "hero": "Obsidia",
-          "banhero": "",
+          "hero": "Claude",
+          "banhero": "Grock",
           "level": 0,
           "gold": 0,
           "KDA": "0/0/0",
@@ -152,8 +152,8 @@
         {
           "name": "idok",
           "lane": "roam",
-          "hero": "Tigreal",
-          "banhero": "Yve",
+          "hero": "",
+          "banhero": "",
           "level": 0,
           "gold": 0,
           "KDA": "0/0/0",
@@ -170,7 +170,7 @@
         {
           "name": "yehezkiel",
           "lane": "mid",
-          "hero": "Pharsa",
+          "hero": "",
           "banhero": "",
           "level": 0,
           "gold": 0,
@@ -188,7 +188,7 @@
         {
           "name": "superdan",
           "lane": "exp",
-          "hero": "Cici",
+          "hero": "",
           "banhero": "",
           "level": 0,
           "gold": 0,
@@ -205,6 +205,9 @@
         }
       ],
       "coach": "khezcute"
+    },
+    "config": {
+      "useLogoShadow": false
     }
   },
   "winmatches": "blue"

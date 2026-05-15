@@ -55,6 +55,11 @@ async function loadFromServer() {
             const laneSelect = document.getElementById(`lane-select-${10+i}`);
             if (laneSelect) laneSelect.value = playerLane;
         }
+        // Load Toggle Drop Shadow
+        if (data.teamdata.config) {
+            const shadowToggle = document.getElementById('toggle-logo-shadow');
+            if (shadowToggle) shadowToggle.checked = !!data.teamdata.config.useLogoShadow;
+        }
 
     } catch (error) {
         console.error("Gagal memuat data:", error);
@@ -106,6 +111,13 @@ async function saveToServer() {
             // Simpan Lane (NEW)
             const laneVal = document.getElementById(`lane-select-${10+i}`).value;
             fullData.teamdata.redteam.playerlist[i].lane = laneVal;
+        }
+
+        // Simpan Konfigurasi Toggle Shadow
+        if (!fullData.teamdata.config) fullData.teamdata.config = {};
+        const shadowToggle = document.getElementById('toggle-logo-shadow');
+        if (shadowToggle) {
+            fullData.teamdata.config.useLogoShadow = shadowToggle.checked;
         }
 
         // 3. KIRIM DATA LENGKAP KEMBALI KE SERVER

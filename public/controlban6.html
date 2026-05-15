@@ -24,6 +24,12 @@
             <button onclick="switchNames()">Switch Team Nickname</button>
             <button onclick="switchImages()">Switch Team Logo</button>
         </div>
+        <div style="margin-top: 15px; text-align: center;">
+            <label style="color: white; font-weight: bold; cursor: pointer; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 5px; border: 1px solid #444;">
+                <input type="checkbox" id="toggle-logo-shadow" onchange="saveToServer()" style="margin-right: 8px;">
+                Enable Logo Drop Shadow
+            </label>
+        </div>
 
         <audio id="hero-voice" hidden></audio>
 

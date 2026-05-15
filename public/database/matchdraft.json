@@ -2,17 +2,17 @@
   "draftdata": {
     "timer": "60",
     "timerRunning": false,
-    "current_phase": 13,
+    "current_phase": 6,
     "blueside": {
       "ban": [
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/layla.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/obsidia.png"
         },
         {
           "hero": ""
-        },
-        {
-          "hero": "/Assets/HeroPick/phoveus.png"
         },
         {
           "hero": ""
@@ -23,32 +23,32 @@
       ],
       "pick": [
         {
-          "hero": "/Assets/HeroPick/harley.png"
+          "hero": "/Assets/HeroPick/baxia.png"
         },
         {
-          "hero": "/Assets/HeroPick/lapulapu.png"
+          "hero": ""
         },
         {
-          "hero": "/Assets/HeroPick/angela.png"
+          "hero": ""
         },
         {
-          "hero": "/Assets/HeroPick/beatrix.png"
+          "hero": ""
         },
         {
-          "hero": "/Assets/HeroPick/kadita.png"
+          "hero": ""
         }
       ]
     },
     "redside": {
       "ban": [
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/miya.png"
+        },
+        {
+          "hero": "/Assets/HeroPick/grock.png"
         },
         {
           "hero": ""
-        },
-        {
-          "hero": "/Assets/HeroPick/yve.png"
         },
         {
           "hero": ""
@@ -62,16 +62,16 @@
           "hero": "/Assets/HeroPick/lancelot.png"
         },
         {
-          "hero": "/Assets/HeroPick/obsidia.png"
+          "hero": "/Assets/HeroPick/claude.png"
         },
         {
-          "hero": "/Assets/HeroPick/tigreal.png"
+          "hero": ""
         },
         {
-          "hero": "/Assets/HeroPick/pharsa.png"
+          "hero": ""
         },
         {
-          "hero": "/Assets/HeroPick/cici.png"
+          "hero": ""
         }
       ]
     },

@@ -120,11 +120,39 @@ async function fetchMapData() {
 
 function updateMapDisplay(drawData) {
     const nameEl = document.getElementById('map-name-display');
+    const placeholderEl = document.getElementById('map-icon-placeholder');
     if (!nameEl) return;
+    
     if (drawData && drawData.result) {
-        nameEl.textContent = drawData.result.toUpperCase();
+        const mapName = drawData.result;
+        nameEl.textContent = mapName.toUpperCase();
+        
+        // Render icon map
+        if (placeholderEl) {
+            let imgEl = placeholderEl.querySelector('img');
+            if (!imgEl) {
+                imgEl = document.createElement('img');
+                placeholderEl.innerHTML = ''; // Hapus fallback text "MAP"
+                placeholderEl.appendChild(imgEl);
+            }
+            
+            // URL file map icon khusus (harus sama persis dengan nama map + .png)
+            // Menggunakan folder 'mapicon' agar tidak merusak background HD di drawdisplay
+            const mapIconUrl = `Assets/mapicon/${mapName}.png`;
+            
+            // Error handling kalau file tidak ada
+            imgEl.onerror = function() {
+                this.onerror = null;
+                placeholderEl.innerHTML = '<span class="map-icon-text">MAP</span>';
+            };
+            
+            imgEl.src = mapIconUrl;
+        }
     } else {
         nameEl.textContent = '-';
+        if (placeholderEl) {
+            placeholderEl.innerHTML = '<span class="map-icon-text">MAP</span>';
+        }
     }
 }
 
@@ -204,7 +232,9 @@ function updateDisplay(newData) {
 const phaseElement = document.getElementById('phase');
 const arrowElement = document.getElementById('arrow');
 const timerElement = document.getElementById('timer');
-const timerBar = document.getElementById('timer-bar');
+const timerBarLeft = document.getElementById('timer-bar-left');
+const timerBarRight = document.getElementById('timer-bar-right');
+const timerBarFull = document.getElementById('timer-bar-full');
 
 const phases = [
     { type: "", direction: "/Assets/Other/LeftBanning.gif" },
@@ -245,12 +275,20 @@ function updateGameLogic(data) {
 
     let currentPhaseIndex = parseInt(data.current_phase) || 0;
     
+    // Deteksi active side
+    let activeSide = "both";
+    if (currentPhaseIndex < phases.length) {
+        let dir = phases[currentPhaseIndex].direction;
+        if (dir.includes("Left")) activeSide = "left";
+        else if (dir.includes("Right")) activeSide = "right";
+    }
+
     // Deteksi apakah fase berpindah
     let phaseChanged = (currentPhaseIndex !== lastPhaseIndex);
     lastPhaseIndex = currentPhaseIndex;
 
     // Sinkronkan Timer dari Full Update (Reset & Restart Bar jika perlu)
-    syncTimerTick(data.timer, data.timer_running, phaseChanged);
+    syncTimerTick(data.timer, data.timer_running, phaseChanged, activeSide);
 
     // Logic Tampilan Phase
     if (phaseElement && arrowElement) {
@@ -442,13 +480,14 @@ function resetPickAnimationState() {
 
 
 // --- MURNI DIKONTROL SERVER (TANPA setInterval LOKAL) ---
-function syncTimerTick(timerValue, isRunning, phaseChanged = false) {
+function syncTimerTick(timerValue, isRunning, phaseChanged = false, activeSide = "both") {
     if (currentDraftData) {
         currentDraftData.timer = timerValue;
         currentDraftData.timer_running = isRunning;
     }
 
-    let timerNum = parseInt(timerValue) || 60;
+    let timerNum = parseInt(timerValue);
+    if (isNaN(timerNum)) timerNum = 60;
 
     // 1. Update Teks Detik Langsung (Anti drift)
     if (timerElement) {
@@ -458,37 +497,67 @@ function syncTimerTick(timerValue, isRunning, phaseChanged = false) {
     // 2. Logic Animasi CSS Bar
     // Hanya picu animasi kalau baru di-start (false -> true) atau pindah fase
     if ((isRunning && !lastRunningState) || (isRunning && phaseChanged)) {
-        animateTimerBar(timerNum);
+        animateTimerBar(timerNum, activeSide);
     } 
     // Reset bar kalau di-stop (true -> false)
     else if (!isRunning && lastRunningState) {
-        stopTimerBar();
+        stopTimerBar(activeSide);
     }
     
     lastRunningState = isRunning;
 }
 
-function animateTimerBar(duration) {
-    if (!timerBar) return;
+function animateTimerBar(duration, side = "both") {
     if (timerAnimationTimeout) clearTimeout(timerAnimationTimeout);
 
     // Kembalikan ke penuh secara instant
-    timerBar.style.transition = "none"; 
-    timerBar.style.width = "100%";
+    if (timerBarLeft) {
+        timerBarLeft.style.transition = "none"; 
+        timerBarLeft.style.width = (side === "left") ? "100%" : "0%";
+    }
+    if (timerBarRight) {
+        timerBarRight.style.transition = "none"; 
+        timerBarRight.style.width = (side === "right") ? "100%" : "0%";
+    }
+    if (timerBarFull) {
+        timerBarFull.style.transition = "none";
+        timerBarFull.style.width = (side === "both") ? "100%" : "0%";
+    }
     
     // Mulai animasi menyusut sesuai durasi yang tersisa
     timerAnimationTimeout = setTimeout(() => {
-        void timerBar.offsetWidth; // Force Reflow
-        timerBar.style.transition = `width ${duration}s linear`;
-        timerBar.style.width = "0%";
+        if (timerBarLeft && side === "left") {
+            void timerBarLeft.offsetWidth; // Force Reflow
+            timerBarLeft.style.transition = `width ${duration}s linear`;
+            timerBarLeft.style.width = "0%";
+        }
+        if (timerBarRight && side === "right") {
+            void timerBarRight.offsetWidth; // Force Reflow
+            timerBarRight.style.transition = `width ${duration}s linear`;
+            timerBarRight.style.width = "0%";
+        }
+        if (timerBarFull && side === "both") {
+            void timerBarFull.offsetWidth; // Force Reflow
+            timerBarFull.style.transition = `width ${duration}s linear`;
+            timerBarFull.style.width = "0%";
+        }
     }, 50); // Delay sangat singkat agar DOM sempat merespon 'width 100%'
 }
 
-function stopTimerBar() {
-    if (!timerBar) return;
+function stopTimerBar(side = "both") {
     if (timerAnimationTimeout) clearTimeout(timerAnimationTimeout);
     
-    // Bekukan bar kembali ke 100% jika dihentikan/reset
-    timerBar.style.transition = 'width 0.5s ease';
-    timerBar.style.width = '100%';
+    // Bekukan bar kembali ke 100% jika dihentikan/reset (hanya yang aktif)
+    if (timerBarLeft) {
+        timerBarLeft.style.transition = 'width 0.5s ease';
+        timerBarLeft.style.width = (side === "left") ? "100%" : "0%";
+    }
+    if (timerBarRight) {
+        timerBarRight.style.transition = 'width 0.5s ease';
+        timerBarRight.style.width = (side === "right") ? "100%" : "0%";
+    }
+    if (timerBarFull) {
+        timerBarFull.style.transition = 'width 0.5s ease';
+        timerBarFull.style.width = (side === "both") ? "100%" : "0%";
+    }
 }

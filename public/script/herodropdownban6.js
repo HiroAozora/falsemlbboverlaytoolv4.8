@@ -523,7 +523,7 @@ const TimerManager = {
         this.updateUI();
     },
 
-    reset: function(defaultTime = "60") {
+    reset: function(defaultTime = "30") {
         this.stop();
         if (currentDraftData) {
             currentDraftData.timer = defaultTime;
@@ -567,14 +567,14 @@ async function handleControlAction(action) {
     else if (action === "nextPhase") {
         if (currentPhaseIndex < dropdownOrder.length) {
             currentDraftData.current_phase = currentPhaseIndex + 1;
-            TimerManager.reset("60"); 
+            TimerManager.reset("30"); 
             currentDraftData.timer_running = true;
             TimerManager.start();
         }
     } 
     else if (action === "reset") {
         currentDraftData.current_phase = 0;
-        TimerManager.reset("60");
+        TimerManager.reset("30");
         correctionMode = false;
         
         // Reset Draft Data (Gambar)

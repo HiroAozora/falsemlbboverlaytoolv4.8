@@ -1,15 +1,15 @@
 {
   "draftdata": {
-    "timer": "60",
+    "timer": "0",
     "timerRunning": false,
-    "current_phase": 6,
+    "current_phase": 5,
     "blueside": {
       "ban": [
         {
-          "hero": "/Assets/HeroPick/layla.png"
+          "hero": "/Assets/HeroPick/fanny.png"
         },
         {
-          "hero": "/Assets/HeroPick/obsidia.png"
+          "hero": "/Assets/HeroPick/aamon.png"
         },
         {
           "hero": ""
@@ -23,7 +23,7 @@
       ],
       "pick": [
         {
-          "hero": "/Assets/HeroPick/baxia.png"
+          "hero": "/Assets/HeroPick/miya.png"
         },
         {
           "hero": ""
@@ -42,10 +42,10 @@
     "redside": {
       "ban": [
         {
-          "hero": "/Assets/HeroPick/miya.png"
+          "hero": "/Assets/HeroPick/joy.png"
         },
         {
-          "hero": "/Assets/HeroPick/grock.png"
+          "hero": "/Assets/HeroPick/lukas.png"
         },
         {
           "hero": ""
@@ -59,10 +59,10 @@
       ],
       "pick": [
         {
-          "hero": "/Assets/HeroPick/lancelot.png"
+          "hero": ""
         },
         {
-          "hero": "/Assets/HeroPick/claude.png"
+          "hero": ""
         },
         {
           "hero": ""

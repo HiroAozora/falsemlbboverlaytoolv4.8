@@ -8,13 +8,20 @@
 </head>
 <body>
     
+    <!-- TOP INFO BAR (Floating at the very top) -->
+    <div id="top-info-bar">
+        <div class="top-info-content">
+            <div id="top-map-icon-box"></div>
+            <div id="top-map-info">EXPANDING RIVER</div>
+        </div>
+    </div>
+
 <div class="mainbox">
 
     <!-- ===== UPPER: BAN SECTION ===== -->
     <div class="upper">
 
         <div class="upperside" id="upper-blue">
-
             <!-- Coach Bar Blue -->
             <div class="coachbar coachbar-blue" id="coach-display-blue" style="display:none;">
                 <div class="coach-icon-placeholder">
@@ -22,42 +29,27 @@
                 </div>
                 <span class="coach-name"></span>
             </div>
-
             <div class="banholder">
-
                 <div class="banhero">
                     <div id="image-box-11" class="image-box"><img id="image-display-11" src=""></div>
-                    <div id="ban-left-1" class="box ban0"></div>  
+                    <div id="ban-left-1" class="box ban0"></div>
                 </div>
                 <div class="banhero">
                     <div id="image-box-12" class="image-box"><img id="image-display-12" src=""></div>
-                    <div id="ban-left-2" class="box ban0"></div>  
+                    <div id="ban-left-2" class="box ban0"></div>
                 </div>
                 <div class="banhero">
                     <div id="image-box-13" class="image-box"><img id="image-display-13" src=""></div>
-                    <div id="ban-left-3" class="box ban0"></div>  
+                    <div id="ban-left-3" class="box ban0"></div>
                 </div>
-                
-
-            </div>
-
-        </div>
-
-        <!-- UPPERMID: Map Info -->
-        <div class="uppermid">
-            <div class="map-info-box">
-                <div class="map-icon-placeholder" id="map-icon-placeholder">
-                    <span class="map-icon-text">MAP</span>
-                </div>
-                <div class="map-name-text" id="map-name-display">-</div>
             </div>
         </div>
+
+        <!-- UPPERMID: Sponsor Area -->
+        <div class="uppermid" id="sponsor-area"></div>
 
         <div class="upperside" id="upper-red">
-
             <div class="banholder">
-
-                
                 <div class="banhero">
                     <div id="image-box-18" class="image-box"><img id="image-display-18" src=""></div>
                     <div id="ban-right-3" class="box ban0"></div>
@@ -70,10 +62,7 @@
                     <div id="image-box-16" class="image-box"><img id="image-display-16" src=""></div>
                     <div id="ban-right-1" class="box ban0"></div>
                 </div>
-                
-
             </div>
-
             <!-- Coach Bar Red -->
             <div class="coachbar coachbar-red" id="coach-display-red" style="display:none;">
                 <span class="coach-name"></span>
@@ -81,10 +70,10 @@
                     <img src="Assets/Other/coach_icon.png" class="coach-icon-img" alt="Coach">
                 </div>
             </div>
-            
         </div>
 
     </div>
+
 
     <!-- ===== LOWER: PICK SECTION ===== -->
     <div class="lower">
@@ -164,6 +153,12 @@
         <div class="lowermid">
 
             <div class="upperlowermid">
+
+                <!-- Match Info mengapit logo turnamen -->
+                <div id="match-info-container">
+                    <div id="match-title-display">BRONZE MATCH</div>
+                    <div id="match-number-display">MATCH 1</div>
+                </div>
 
                 <div class="team-info-col">
                     <div class="teamlogo">

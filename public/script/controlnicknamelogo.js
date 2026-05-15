@@ -6,6 +6,46 @@ let currentRedLogo = "";
 
 // --- FUNGSI UTAMA: LOAD & SAVE DATA ---
 
+// === FUNGSI SKOR BARU (+/-) ===
+function changeScore(inputId, delta) {
+    const inputEl = document.getElementById(inputId);
+    if (!inputEl) return;
+    
+    let currentScore = parseInt(inputEl.value) || 0;
+    currentScore += delta;
+    
+    if (currentScore < 0) currentScore = 0; // Skor tidak boleh minus
+    
+    inputEl.value = currentScore;
+    saveToServer();
+}
+
+// === FUNGSI BO BARU (Tombol) ===
+function setBO(val) {
+    const boSelect = document.getElementById('bo-select');
+    if (boSelect) {
+        boSelect.value = val;
+        updateBOButtonVisuals(val);
+        saveToServer();
+    }
+}
+
+function updateBOButtonVisuals(activeVal) {
+    const buttons = document.querySelectorAll('.bo-btn');
+    buttons.forEach(btn => {
+        btn.style.background = '#333';
+        btn.style.borderColor = '#555';
+    });
+    
+    const activeBtn = document.getElementById(`bo-btn-${activeVal}`);
+    if (activeBtn) {
+        activeBtn.style.background = '#ff8c00'; // Warna oren aktif
+        activeBtn.style.borderColor = '#fff';
+    }
+}
+
+window.onload = loadFromServer;
+
 // Mengambil data dari Server dan mengisi Input Form
 async function loadFromServer() {
     try {
@@ -55,10 +95,26 @@ async function loadFromServer() {
             const laneSelect = document.getElementById(`lane-select-${10+i}`);
             if (laneSelect) laneSelect.value = playerLane;
         }
-        // Load Toggle Drop Shadow
+        // Load Toggle Drop Shadow & Best Of
         if (data.teamdata.config) {
+            const matchTitleInput = document.getElementById('match-title-input');
+            const matchNumberInput = document.getElementById('match-number-input');
+            if (matchTitleInput && data.teamdata.config.matchTitle !== undefined) {
+                matchTitleInput.value = data.teamdata.config.matchTitle;
+            }
+            if (matchNumberInput && data.teamdata.config.matchNumber !== undefined) {
+                matchNumberInput.value = data.teamdata.config.matchNumber;
+            }
             const shadowToggle = document.getElementById('toggle-logo-shadow');
-            if (shadowToggle) shadowToggle.checked = !!data.teamdata.config.useLogoShadow;
+            if (shadowToggle && data.teamdata.config.useLogoShadow !== undefined) {
+                shadowToggle.checked = !!data.teamdata.config.useLogoShadow;
+            }
+            
+            const boSelect = document.getElementById('bo-select');
+            if (boSelect && data.teamdata.config.bestOf) {
+                boSelect.value = data.teamdata.config.bestOf;
+                updateBOButtonVisuals(data.teamdata.config.bestOf);
+            }
         }
 
     } catch (error) {
@@ -113,12 +169,23 @@ async function saveToServer() {
             fullData.teamdata.redteam.playerlist[i].lane = laneVal;
         }
 
-        // Simpan Konfigurasi Toggle Shadow
+        // Simpan Konfigurasi Toggle Shadow, Best Of, dan Match Info
         if (!fullData.teamdata.config) fullData.teamdata.config = {};
+        
         const shadowToggle = document.getElementById('toggle-logo-shadow');
         if (shadowToggle) {
             fullData.teamdata.config.useLogoShadow = shadowToggle.checked;
         }
+
+        const boSelect = document.getElementById('bo-select');
+        if (boSelect) {
+            fullData.teamdata.config.bestOf = boSelect.value;
+        }
+
+        const matchTitleInput = document.getElementById('match-title-input');
+        const matchNumberInput = document.getElementById('match-number-input');
+        if (matchTitleInput) fullData.teamdata.config.matchTitle = matchTitleInput.value;
+        if (matchNumberInput) fullData.teamdata.config.matchNumber = matchNumberInput.value;
 
         // 3. KIRIM DATA LENGKAP KEMBALI KE SERVER
         await fetch('/api/matchdata', {

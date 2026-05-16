@@ -24,6 +24,29 @@
             <button onclick="switchNames()">Switch Team Nickname</button>
             <button onclick="switchImages()">Switch Team Logo</button>
         </div>
+        <div style="margin-top: 15px; text-align: center; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <div style="color: white; font-weight: bold; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 5px; border: 1px solid #444; display: flex; align-items: center; gap: 10px;">
+                Best Of (BO):
+                <div style="display: flex; gap: 5px;">
+                    <button type="button" class="bo-btn" id="bo-btn-1" onclick="setBO(1)" style="padding: 5px 10px; cursor: pointer; background: #333; color: white; border: 1px solid #555; border-radius: 4px;">BO1</button>
+                    <button type="button" class="bo-btn" id="bo-btn-3" onclick="setBO(3)" style="padding: 5px 10px; cursor: pointer; background: #333; color: white; border: 1px solid #555; border-radius: 4px;">BO3</button>
+                    <button type="button" class="bo-btn" id="bo-btn-5" onclick="setBO(5)" style="padding: 5px 10px; cursor: pointer; background: #333; color: white; border: 1px solid #555; border-radius: 4px;">BO5</button>
+                    <button type="button" class="bo-btn" id="bo-btn-7" onclick="setBO(7)" style="padding: 5px 10px; cursor: pointer; background: #333; color: white; border: 1px solid #555; border-radius: 4px;">BO7</button>
+                </div>
+                <input type="hidden" id="bo-select" value="3">
+            </div>
+
+            <div style="color: white; font-weight: bold; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 5px; border: 1px solid #444; display: flex; align-items: center; gap: 10px;">
+                Match:
+                <input type="text" id="match-title-input" placeholder="Bronze Match" oninput="saveToServer()" style="background: #222; color: white; border: 1px solid #444; padding: 5px 10px; border-radius: 4px; width: 120px;">
+                <input type="text" id="match-number-input" placeholder="Match 1" oninput="saveToServer()" style="background: #222; color: white; border: 1px solid #444; padding: 5px 10px; border-radius: 4px; width: 80px;">
+            </div>
+
+            <label style="color: white; font-weight: bold; cursor: pointer; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 5px; border: 1px solid #444;">
+                <input type="checkbox" id="toggle-logo-shadow" onchange="saveToServer()" style="margin-right: 8px;">
+                Enable Logo Drop Shadow
+            </label>
+        </div>
 
         <audio id="hero-voice" hidden></audio>
 
@@ -32,7 +55,15 @@
                 <div class="section-card">
                     <div class="namebox">BLUESIDE AND LOGO</div>
                     <div class="name-box"><input type="text" id="name-input-1" placeholder="Nama Tim Biru"></div>
-                    <div class="name-box"><input type="text" id="name-input-2" placeholder="Skor"></div>
+
+                    <!-- Sistem Skor (Tombol +/-) -->
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px; gap: 10px;">
+                        <span style="color: white; font-weight: bold;">Skor:</span>
+                        <button onclick="changeScore('name-input-2', -1)" style="width: 30px; height: 30px; font-weight: bold; cursor: pointer; background: #444; color: white; border: none; border-radius: 4px;">-</button>
+                        <input type="text" id="name-input-2" value="0" readonly style="width: 40px; text-align: center; font-weight: bold; padding: 5px;">
+                        <button onclick="changeScore('name-input-2', 1)" style="width: 30px; height: 30px; font-weight: bold; cursor: pointer; background: #444; color: white; border: none; border-radius: 4px;">+</button>
+                    </div>
+                    <div class="name-box"><input type="text" id="coach-input-blue" placeholder="Nama Coach Biru (opsional)"></div>
                     <div class="container">
                         <label>Upload Logo Biru:</label>
                         <input type="file" id="file1" accept="image/*">
@@ -106,7 +137,15 @@
                 <div class="section-card">
                     <div class="namebox">REDSIDE AND LOGO</div>
                     <div class="name-box"><input type="text" id="name-input-8" placeholder="Nama Tim Merah"></div>
-                    <div class="name-box"><input type="text" id="name-input-9" placeholder="Skor"></div>
+
+                    <!-- Sistem Skor (Tombol +/-) -->
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px; gap: 10px;">
+                        <span style="color: white; font-weight: bold;">Skor:</span>
+                        <button onclick="changeScore('name-input-9', -1)" style="width: 30px; height: 30px; font-weight: bold; cursor: pointer; background: #444; color: white; border: none; border-radius: 4px;">-</button>
+                        <input type="text" id="name-input-9" value="0" readonly style="width: 40px; text-align: center; font-weight: bold; padding: 5px;">
+                        <button onclick="changeScore('name-input-9', 1)" style="width: 30px; height: 30px; font-weight: bold; cursor: pointer; background: #444; color: white; border: none; border-radius: 4px;">+</button>
+                    </div>
+                    <div class="name-box"><input type="text" id="coach-input-red" placeholder="Nama Coach Merah (opsional)"></div>
                     <div class="container">
                         <label>Upload Logo Merah:</label>
                         <input type="file" id="file2" accept="image/*">

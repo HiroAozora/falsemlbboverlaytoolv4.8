@@ -56,6 +56,10 @@ function connectWebSocket() {
                 // Jangan timpa seluruh data, cukup update angka dan barnya saja
                 syncTimerTick(msg.data.draftdata.timer, msg.data.draftdata.timer_running, false);
             }
+            // 3. UPDATE MAP dari drawcontrol
+            else if (msg.type === 'mapdraw_update' && msg.data) {
+                updateMapDisplay(msg.data);
+            }
         } catch (e) {
             console.error("WS Parse Error", e);
         }
@@ -94,6 +98,48 @@ function processData(newDraftData) {
 
 // --- INITIALIZE ---
 loadHeroes().then(() => connectWebSocket());
+
+// --- MAP DISPLAY ---
+async function fetchMapData() {
+    try {
+        const res = await fetch('/api/mapdraw');
+        const data = await res.json();
+        if (data && data.drawdata) {
+            updateMapDisplay(data.drawdata);
+        }
+    } catch(e) { console.warn('Map data not available:', e); }
+}
+
+function updateMapDisplay(drawData) {
+    const nameEl = document.getElementById('top-map-info');
+    const iconBox = document.getElementById('top-map-icon-box');
+    if (!nameEl || !iconBox) return;
+
+    if (drawData && drawData.result) {
+        const mapName = drawData.result;
+        nameEl.textContent = mapName.toUpperCase();
+
+        let imgEl = iconBox.querySelector('img');
+        if (!imgEl) {
+            imgEl = document.createElement('img');
+            iconBox.innerHTML = '';
+            iconBox.appendChild(imgEl);
+        }
+        imgEl.src = `Assets/mapicon/${mapName}.png`;
+        imgEl.alt = mapName;
+        imgEl.onerror = function() {
+            this.onerror = function() { this.style.display = 'none'; };
+            this.src = `Assets/mapicon/${mapName.toLowerCase()}.png`;
+        };
+        imgEl.style.display = 'block';
+    } else {
+        nameEl.textContent = '-';
+        iconBox.innerHTML = '';
+    }
+}
+
+fetchMapData();
+setInterval(fetchMapData, 5000);
 
 
 // --- 3. DISPLAY UPDATE LOGIC ---

@@ -7,58 +7,57 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <!-- TOP INFO BAR (Floating at the very top) -->
+    <div id="top-info-bar">
+        <div class="top-info-content">
+            <div id="top-map-icon-box"></div>
+            <div id="top-map-info">EXPANDING RIVER</div>
+        </div>
+    </div>
+
 <div class="mainbox">
 
+    <!-- ===== UPPER: BAN SECTION ===== -->
     <div class="upper">
 
-        <div class="upperside">
-
-            <div class="bantextbox"></div>
-
+        <div class="upperside" id="upper-blue">
+            <!-- Coach Bar Blue -->
+            <div class="coachbar coachbar-blue" id="coach-display-blue" style="display:none;">
+                <div class="coach-icon-placeholder">
+                    <img src="Assets/Other/coach_icon.png" class="coach-icon-img" alt="Coach">
+                </div>
+                <span class="coach-name"></span>
+            </div>
             <div class="banholder">
-
                 <div class="banhero">
                     <div id="image-box-11" class="image-box"><img id="image-display-11" src=""></div>
-                    <div id="ban-left-1" class="box ban0"></div>  
+                    <div id="ban-left-1" class="box ban0"></div>
                 </div>
                 <div class="banhero">
                     <div id="image-box-12" class="image-box"><img id="image-display-12" src=""></div>
-                    <div id="ban-left-2" class="box ban0"></div>  
+                    <div id="ban-left-2" class="box ban0"></div>
                 </div>
                 <div class="banhero">
                     <div id="image-box-13" class="image-box"><img id="image-display-13" src=""></div>
-                    <div id="ban-left-3" class="box ban0"></div>  
+                    <div id="ban-left-3" class="box ban0"></div>
                 </div>
                 <div class="banhero">
                     <div id="image-box-14" class="image-box"><img id="image-display-14" src=""></div>
-                    <div id="ban-left-4" class="box ban0"></div>  
+                    <div id="ban-left-4" class="box ban0"></div>
                 </div>
-
                 <div class="banhero">
                     <div id="image-box-15" class="image-box"><img id="image-display-15" src=""></div>
-                    <div id="ban-left-5" class="box ban0"></div>  
+                    <div id="ban-left-5" class="box ban0"></div>
                 </div>
-
             </div>
-            
-            <div class="teamnameholder1">
-                <div id="name-box-1" ></div>
-            </div>
-
-
         </div>
 
-        <div class="uppermid"></div>
+        <!-- UPPERMID: Sponsor Area -->
+        <div class="uppermid" id="sponsor-area"></div>
 
-        <div class="upperside">
-
-            <div class="teamnameholder2">
-                <div id="name-box-8" ></div>
-            </div>
-
+        <div class="upperside" id="upper-red">
             <div class="banholder">
-
                 <div class="banhero">
                     <div id="image-box-20" class="image-box"><img id="image-display-20" src=""></div>
                     <div id="ban-right-5" class="box ban0"></div>
@@ -79,23 +78,27 @@
                     <div id="image-box-16" class="image-box"><img id="image-display-16" src=""></div>
                     <div id="ban-right-1" class="box ban0"></div>
                 </div>
-                
-
             </div>
-
-            <div class="bantextbox"></div>
-            
+            <!-- Coach Bar Red -->
+            <div class="coachbar coachbar-red" id="coach-display-red" style="display:none;">
+                <span class="coach-name"></span>
+                <div class="coach-icon-placeholder">
+                    <img src="Assets/Other/coach_icon.png" class="coach-icon-img" alt="Coach">
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <!-- ===== LOWER: PICK SECTION ===== -->
     <div class="lower">
 
+        <!-- ===== BLUE SIDE (LEFT) ===== -->
         <div class="lowerside">
 
-            <div class="pickholder">
+            <div class="pickholder" id="pickholder-blue">
 
-                <div class="heropick">
+                <div class="heropick" id="heropick-blue-1" data-side="blue" data-slot="1">
                     <div class="lanelogo bluelane">
                         <img id="player-lane-1-blue" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -103,7 +106,7 @@
                     <div class="name-image-box" id="name-image-box-3"></div>
                     <div id="pick-left-1" class="box pick"></div>
                 </div>
-                <div class="heropick">
+                <div class="heropick" id="heropick-blue-2" data-side="blue" data-slot="2">
                     <div class="lanelogo bluelane">
                         <img id="player-lane-2-blue" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -111,7 +114,7 @@
                     <div class="name-image-box" id="name-image-box-4"></div>
                     <div id="pick-left-2" class="box pick"></div>
                 </div>
-                <div class="heropick">
+                <div class="heropick" id="heropick-blue-3" data-side="blue" data-slot="3">
                     <div class="lanelogo bluelane">
                         <img id="player-lane-3-blue" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -119,7 +122,7 @@
                     <div class="name-image-box" id="name-image-box-5"></div>
                     <div id="pick-left-3" class="box pick"></div>
                 </div>
-                <div class="heropick">
+                <div class="heropick" id="heropick-blue-4" data-side="blue" data-slot="4">
                     <div class="lanelogo bluelane">
                         <img id="player-lane-4-blue" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -127,7 +130,7 @@
                     <div class="name-image-box" id="name-image-box-6"></div>
                     <div id="pick-left-4" class="box pick"></div>
                 </div>
-                <div class="heropick">
+                <div class="heropick" id="heropick-blue-5" data-side="blue" data-slot="5">
                     <div class="lanelogo bluelane">
                         <img id="player-lane-5-blue" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -139,56 +142,64 @@
             </div>
 
             <div class="nickholder">
-
-                <div class="playername">
-                    <div id="name-box-3" ></div>
+                <div class="playername" id="playername-blue-1">
+                    <div id="name-box-3"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-4" ></div>
+                <div class="playername" id="playername-blue-2">
+                    <div id="name-box-4"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-5" ></div>
+                <div class="playername" id="playername-blue-3">
+                    <div id="name-box-5"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-6" ></div>
+                <div class="playername" id="playername-blue-4">
+                    <div id="name-box-6"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-7" ></div>
+                <div class="playername" id="playername-blue-5">
+                    <div id="name-box-7"></div>
                 </div>
-
             </div>
 
         </div>
 
+        <!-- ===== CENTER (LOWERMID) ===== -->
         <div class="lowermid">
 
             <div class="upperlowermid">
 
-                <div class="teamlogo">
-                    <img id="displayImage1" src="" alt="Logo 2 Tidak Ada">
+                <!-- Match Info mengapit logo turnamen -->
+                <div id="match-info-container">
+                    <div id="match-title-display">TOURNAMENT</div>
+                    <div id="match-number-display">MATCH</div>
+                </div>
+
+                <div class="team-info-col">
+                    <div class="teamlogo">
+                        <img id="displayImage1" src="" alt="Logo 1">
+                    </div>
+                    <div id="name-box-1" class="center-team-name"></div>
                 </div>
 
                 <div class="score">
-                    <div id="name-box-2" ></div>
+                    <div id="name-box-2"></div>
                 </div>
 
                 <div class="vs">VS</div>
 
                 <div class="score">
-                    <div id="name-box-9" ></div>
+                    <div id="name-box-9"></div>
                 </div>
 
-                <div class="teamlogo">
-                    <img id="displayImage2" src="" alt="Logo 2 Tidak Ada">
+                <div class="team-info-col">
+                    <div class="teamlogo">
+                        <img id="displayImage2" src="" alt="Logo 2">
+                    </div>
+                    <div id="name-box-8" class="center-team-name"></div>
                 </div>
 
             </div>
 
             <div class="lowerlowermid">
-                
-                <div class="timerbar">
-                    <div id="timer-bar"></div> 
-                </div>
+
                 <div class="arrow">
                     <img id="arrow" src="" alt="Direction">
                 </div>
@@ -200,20 +211,20 @@
 
         </div>
 
+        <!-- ===== RED SIDE (RIGHT) ===== -->
         <div class="lowerside">
 
-            <div class="pickholder">
+            <div class="pickholder" id="pickholder-red">
 
-                <div class="heropick">
+                <div class="heropick" id="heropick-red-5" data-side="red" data-slot="5">
                     <div class="lanelogo redlane">
                         <img id="player-lane-5-red" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
                     <div id="image-box-10" class="image-box"><img id="image-display-10" src=""></div>
                     <div class="name-image-box" id="name-image-box-14"></div>
-                    <div id="pick-right-5" class="box pick"></div> 
+                    <div id="pick-right-5" class="box pick"></div>
                 </div>
-
-                <div class="heropick">
+                <div class="heropick" id="heropick-red-4" data-side="red" data-slot="4">
                     <div class="lanelogo redlane">
                         <img id="player-lane-4-red" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -221,8 +232,7 @@
                     <div class="name-image-box" id="name-image-box-13"></div>
                     <div id="pick-right-4" class="box pick"></div>
                 </div>
-                
-                <div class="heropick">
+                <div class="heropick" id="heropick-red-3" data-side="red" data-slot="3">
                     <div class="lanelogo redlane">
                         <img id="player-lane-3-red" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -230,8 +240,7 @@
                     <div class="name-image-box" id="name-image-box-12"></div>
                     <div id="pick-right-3" class="box pick"></div>
                 </div>
-
-                <div class="heropick">
+                <div class="heropick" id="heropick-red-2" data-side="red" data-slot="2">
                     <div class="lanelogo redlane">
                         <img id="player-lane-2-red" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -239,8 +248,7 @@
                     <div class="name-image-box" id="name-image-box-11"></div>
                     <div id="pick-right-2" class="box pick"></div>
                 </div>
-
-                <div class="heropick">
+                <div class="heropick" id="heropick-red-1" data-side="red" data-slot="1">
                     <div class="lanelogo redlane">
                         <img id="player-lane-1-red" class="lane-icon" src="Assets/lane/none.png" alt="">
                     </div>
@@ -252,53 +260,43 @@
             </div>
 
             <div class="nickholder">
-
-                <div class="playername">
-                    <div id="name-box-14" ></div>
+                <div class="playername" id="playername-red-5">
+                    <div id="name-box-14"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-13" ></div>
+                <div class="playername" id="playername-red-4">
+                    <div id="name-box-13"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-12" ></div>
+                <div class="playername" id="playername-red-3">
+                    <div id="name-box-12"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-11" ></div>
+                <div class="playername" id="playername-red-2">
+                    <div id="name-box-11"></div>
                 </div>
-                <div class="playername">
-                    <div id="name-box-10" ></div>
+                <div class="playername" id="playername-red-1">
+                    <div id="name-box-10"></div>
                 </div>
-
             </div>
 
         </div>
 
-    </div>
+        <!-- Timer Bar (single, sesuai displayhero.js) -->
+        <div class="timerbar">
+            <div id="timer-bar"></div>
+        </div>
 
+    </div>
 
 </div>
 
 <audio id="hero-voice"></audio>
 <button class="audiob" onclick="new Audio().play().catch(e => console.log('Audio unlocked'))">Enable Audio</button>
 
-
-
-       <div class="phasebox"> <h2 id="phase"></h2>
-        
-
-
-
-<div class="hide">
-    <div id="image-box-15" class="image-box"><img id="image-display-15" src=""></div>
-    <div id="ban-left-5" class="box ban0"></div>  
-
-    <div id="image-box-20" class="image-box"><img id="image-display-20" src=""></div>
-    <div id="ban-right-5" class="box ban0"></div>
-</div>
+<div class="phasebox"><h2 id="phase"></h2>
 
 </body>
 
 <script src="script/displaynicknamelogo.js"></script>
 <script src="script/displayhero.js"></script>
 <script src="script/laneimg.js"></script>
+
 </html>

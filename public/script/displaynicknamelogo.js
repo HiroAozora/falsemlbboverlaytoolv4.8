@@ -64,11 +64,13 @@ function updateUI(data) {
   const useShadow = !!config.useLogoShadow;
 
   // Render Match Info ke area Tournament Logo
-  const titleEl = document.getElementById('match-title-display');
-  const numberEl = document.getElementById('match-number-display');
-  
-  if (titleEl) titleEl.textContent = (config.matchTitle || "TOURNAMENT").toUpperCase();
-  if (numberEl) numberEl.textContent = (config.matchNumber || "MATCH").toUpperCase();
+  const titleEl = document.getElementById("match-title-display");
+  const numberEl = document.getElementById("match-number-display");
+
+  if (titleEl)
+    titleEl.textContent = (config.matchTitle || "TOURNAMENT").toUpperCase();
+  if (numberEl)
+    numberEl.textContent = (config.matchNumber || "MATCH").toUpperCase();
 
   // Biru
   const hasBlueLogo = blue.logo && blue.logo.trim() !== "";
@@ -125,14 +127,17 @@ function autoResizeText(element) {
   if (!element || element.clientWidth === 0) return;
 
   // 1. Set Base Font Size berdasarkan panjang karakter (Khusus Nama Tim)
-  if (element.id === "name-box-1" || element.id === "name-box-8") {
+  // Jika halaman pakai class "no-team-autoresize", biarkan CSS yang mengontrol
+  const skipTeamResize = document.body.classList.contains("no-team-autoresize");
+
+  if (!skipTeamResize && (element.id === "name-box-1" || element.id === "name-box-8")) {
     const textLength = element.textContent.trim().length;
     if (textLength <= 5) {
       element.style.fontSize = "20px";
     } else {
       element.style.fontSize = "14px";
     }
-  } else {
+  } else if (element.id !== "name-box-1" && element.id !== "name-box-8") {
     // Untuk element lain (nama player, dll), reset ke font-size di CSS
     element.style.fontSize = "";
   }

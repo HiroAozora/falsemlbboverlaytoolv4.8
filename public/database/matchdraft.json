@@ -1,8 +1,8 @@
 {
   "draftdata": {
-    "timer": "0",
+    "timer": "30",
     "timerRunning": false,
-    "current_phase": 5,
+    "current_phase": 13,
     "blueside": {
       "ban": [
         {
@@ -12,7 +12,7 @@
           "hero": "/Assets/HeroPick/aamon.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/xavier.png"
         },
         {
           "hero": ""
@@ -26,16 +26,16 @@
           "hero": "/Assets/HeroPick/miya.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/lunox.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/hilda.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/alice.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/claude.png"
         }
       ]
     },
@@ -48,7 +48,7 @@
           "hero": "/Assets/HeroPick/lukas.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/karrie.png"
         },
         {
           "hero": ""
@@ -59,19 +59,19 @@
       ],
       "pick": [
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/uranus.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/yve.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/gloo.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/fredrin.png"
         },
         {
-          "hero": ""
+          "hero": "/Assets/HeroPick/akai.png"
         }
       ]
     },
